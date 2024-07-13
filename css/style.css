@@ -1,12 +1,13 @@
-
+#FFF8F3
+#c9daf8
+#d9d9d9
 
 h2{
     font-size: 30px;
 }
 
-body{
+main{
     padding: 32px;
-
 }
 
 /*----------------------header----------------------*/
@@ -22,7 +23,7 @@ header{
     height: 450px;
     border: 1px solid;
     border-color: black;
-    background-color: black;
+    background-color: #c9daf8;
 }
 
 /*---about---*/
@@ -39,9 +40,13 @@ header{
 .kalkulator{
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     width: 100%;
-    height: 450px;
+    height: 100%;
+    border: 3px solid;
+    border-color: #c9daf8;
     margin-top: 40px;
+    padding: 80px 10px 23px 10px;
 }
 
 /*----------------------input----------------------*/
@@ -49,18 +54,17 @@ header{
     display: flex; 
     justify-content: center;
     align-items: center;
-    border: 1px solid;
-    flex: 1;
-    width: 100%;
+    width: 550px;
     height: 450px;
+    background-color: #c9daf8;
+    border-radius: 3%;
 }
 
 /*---gender img---*/
 
 .gender-img{
     display: flex;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 }
 
 .male-img{
@@ -68,9 +72,7 @@ header{
     height: 150px;
     border: 1px solid;
     border-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    margin-right: 30px;
 }
 
 .female-img{
@@ -80,19 +82,27 @@ header{
     border-color: black;
 }
 
-
 /*---data---*/
 .data{
-    box-sizing: border-box;
-    width: 200px;
-    padding-bottom: 20px;
-
+    box-sizing: border-box; /*gatau buat apa*/
+    width: 433px; 
+    padding-bottom: 20px
 }
 
-.button{
-    padding-bottom: 10px;
+.data div{
+    display: flex; /*gatau buat apa*/
+    align-items: center; /*gatau buat apa*/
+    margin-bottom: 10px; /*jarak antar data yang diinput*/
 }
 
+.data label {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.data input {
+    flex: 2;
+}
 
 /*----------------------output----------------------*/
 .output{
@@ -100,26 +110,30 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid;
-    flex: 1;
-    width: 100%;
+    width: 550px;
     height: 450px;
+    background-color: #c9daf8;
+    border-radius: 3%;
+}
+
+.output div{
+    margin-bottom: 10px;
 }
 
 .output-status{
-    width: 700px;
+    width: 400px;
     height: 100px;
     border: 1px solid;
 }
 
 .output-number{
-    width: 700px;
+    width: 400px;
     height: 100px;
     border: 1px solid;
 }
 
 .output-info{
-    width: 700px;
+    width: 400px;
     height: 100px;
     border: 1px solid;
 }
