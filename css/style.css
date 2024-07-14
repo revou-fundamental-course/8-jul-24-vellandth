@@ -50,11 +50,11 @@ header{
 /*----------------------about----------------------*/
 .about{
     width: 100%;
-    height: 200px;
+    height: 100%;
     border: 1px solid;
     border-color: black;
     margin-top: 40px;
-    padding-left: 10px;
+    padding: 10px;
 }
 
 
@@ -185,7 +185,7 @@ button{
 
 .peringatan{
     width: 100%;
-    height: 100px;
+    height: 100%;
     border: 1px solid;
     border-color: black;
     margin-top: 10px;
