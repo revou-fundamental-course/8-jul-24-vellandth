@@ -4,15 +4,13 @@
 
 *{
     box-sizing: border-box;
-}
-
-h2{
-    font-size: 30px;
+    flex-shrink: 0;
 }
 
 body{
     font-family: "Raleway", sans-serif;
-    background-color: red;
+    background-color: #ffffff;
+    overflow-x: hidden; /* Mencegah pengguliran horizontal */
 }
 
 
@@ -22,15 +20,23 @@ main{
 
 /*----------------------header----------------------*/
 header{
+    position: relative; /*ga ada apa apa*/
     width: 100%;
     height: 100%;
-    background-color: blue;
+    background-color: #c9daf8;
     box-shadow: red;
     padding: 10px;
+    padding-left: 20px;
+    left: -10px; /*biar header full*/
+    top: -10px;
+    width: calc(100% + 200px); /*gatau buat apa*/
+    display: flex;
+    align-items: center;
 }
 
 .logo{
     border: 1px solid;
+    border-color: white;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -38,14 +44,53 @@ header{
     background-size: cover;
 }
 
-/*----------------------banner----------------------*/
-.banner{
-    width: 100%;
-    height: 450px;
-    border: 1px solid;
-    border-color: black;
-    background-color: #c9daf8;
+.navigation h1{
+    padding-left: 10px;
 }
+
+/*----------------------banner----------------------*/
+@keyframes fade{ /*biar pas muncul itu dari gelap ke terang*/
+    from{
+        opacity: 0.6;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+#banner{
+    margin: 0 auto;
+    width: 95%;
+    overflow: hidden; /*gatau apa*/
+}
+
+.slides{
+    overflow: hidden; /*gatau apa*/
+    animation-name: fade; /*gatau apa*/
+    animation-duration: 2s;
+    display: none; /*gatau apa*/
+}
+
+img{
+    width: 100%;
+}
+
+#dot{
+    margin: 0 auto; /*gatau apa*/
+    text-align: center; /*gatau kenapa*/
+}
+
+.dot{ /*gatau bedanya apa*/
+    display: inline-block;
+    border-radius: 50%;
+    background: rgb(199, 187, 187);
+    padding: 10px; /*gatau apa*/
+    margin: 10px 5px;/*gatau apa*/
+}
+
+.active{ /*gatau apa*/
+    background: #c9daf8;
+  }
 
 /*----------------------about----------------------*/
 .about{
@@ -194,10 +239,15 @@ button{
 
 /*----------------------footer----------------------*/
 footer{
+    position: relative; /*kalau dihapus, kena margin left 10 px*/
     width: 100%;
     height: 200px;
     border: 1px solid;
     border-color: black;
-    background-color: black;
+    background-color: #c9daf8;
     margin-top: 20px;
+    padding-left: 20px;
+    left: -10px; /*biar full viewport*/
+    right: -10px;
+    bottom: -10px;
 }
