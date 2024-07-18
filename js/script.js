@@ -62,26 +62,37 @@ function calculateBMI() {
         outputNumber.innerHTML = "";
         outputInfo.innerHTML = "";
     } else if (isNaN(height) || height <= 0 || isNaN(weight) || weight <= 0) {
-        outputStatus.innerHTML = "Masukan nilai yang benar!";
+        outputStatus.innerHTML = "";
         outputNumber.innerHTML = "";
-        outputInfo.innerHTML = "";
+        outputInfo.innerHTML = "Masukan nilai yang benar!";
     } else {
         // Calculate the BMI
         let bmi = (weight / (height * height)).toFixed(2);
 
         // Determine BMI category
-        if (bmi < 18.6) {
-            outputStatus.innerHTML = "Underweight";
+
+        if (bmi < 17.0) {
+            outputStatus.innerHTML = "Sangat Kurus";
             outputNumber.innerHTML = `<span>${bmi}</span>`;
-            outputInfo.innerHTML = "Untuk mencapai berat badan yang sehat, pilih makanan tinggi kalori seperti alpukat, kacang-kacangan, dan daging tanpa lemak. Perbanyak asupan protein dengan telur, ikan, dan produk susu rendah lemak. Latihan resistensi seperti angkat beban akan membantu membangun massa otot.";
-        } else if (bmi >= 18.6 && bmi < 24.9) {
-            outputStatus.innerHTML = "Normal weight";
+            outputInfo.innerHTML = "Fokus pada makanan tinggi kalori dan nutrisi seperti daging merah, kacang-kacangan, produk susu penuh lemak, dan alpukat. Tambahkan smoothie dengan protein tinggi dan latihan kekuatan seperti angkat beban untuk meningkatkan massa otot.";
+        } else if (bmi >= 17.0 && bmi < 18.5) {
+            outputStatus.innerHTML = "Kurus";
             outputNumber.innerHTML = `<span>${bmi}</span>`;
-            outputInfo.innerHTML = "Pertahankan berat badan ideal dengan makan seimbang, termasuk serat dari buah-buahan dan sayuran, protein dari daging tanpa lemak atau sumber nabati, serta lemak sehat dari alpukat dan kacang-kacangan. Lakukan olahraga aerobik seperti berlari atau berenang minimal 30 menit setiap hari untuk kesehatan jantung yang baik.";
+            outputInfo.innerHTML = "Pilih makanan seimbang dengan penekanan pada protein seperti ayam, ikan, dan telur, serta karbohidrat kompleks dari biji-bijian utuh. Lakukan latihan resistensi seperti angkat beban untuk membangun otot, serta olahraga aerobik ringan untuk kesehatan jantung.";
+        } else if (bmi >= 18.5 && bmi < 25.0) {
+            outputStatus.innerHTML = "Normal";
+            outputNumber.innerHTML = `<span>${bmi}</span>`;
+            outputInfo.innerHTML = "Pertahankan keseimbangan nutrisi dengan makan berbagai jenis buah, sayur, protein tanpa lemak, dan lemak sehat. Rutin berolahraga dengan kombinasi latihan kardio seperti berlari atau berenang dan latihan kekuatan seperti yoga atau angkat beban.";
+        } else if (bmi >= 25.0 && bmi < 27.0){
+            outputStatus.innerHTML = "Gemuk";
+            outputNumber.innerHTML = `<span>${bmi}</span>`;
+            outputInfo.innerHTML = "Kurangi asupan kalori dengan menghindari makanan olahan dan gula berlebih. Fokus pada sayuran, protein tanpa lemak, dan biji-bijian utuh. Tingkatkan aktivitas fisik dengan olahraga kardio seperti berjalan cepat atau bersepeda, dan tambahkan latihan kekuatan untuk membakar lemak dan memperkuat otot.";
         } else {
-            outputStatus.innerHTML = "Overweight";
+            outputStatus.innerHTML = "Obesitas";
             outputNumber.innerHTML = `<span>${bmi}</span>`;
-            outputInfo.innerHTML = "Kurangi asupan kalori dengan menghindari makanan olahan dan gula tambahan. Fokus pada sayuran berwarna-warni, biji-bijian utuh, dan protein rendah lemak. Lakukan kombinasi latihan kardio seperti bersepeda atau berjalan cepat dengan latihan kekuatan seperti yoga atau pilates untuk membakar lemak dan memperkuat otot.";
+            outputInfo.innerHTML = "Pilih makanan rendah kalori dengan banyak sayuran, buah, dan protein tanpa lemak. Kurangi karbohidrat sederhana dan lemak jenuh. Mulailah dengan aktivitas fisik ringan seperti berjalan atau berenang, dan secara bertahap tingkatkan intensitas serta tambahkan latihan kekuatan untuk mendukung penurunan berat badan.";
         }
     }
+
 }
+
